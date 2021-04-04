@@ -11,6 +11,9 @@ import lombok.*;
  * weight is the weight of the item,
  * cost is the cost of the item.
  *
+ * @Value, @Builder and @AllArgsConstructor(access = AccessLevel.PRIVATE) tags
+ * are used to make this class immutable.
+ *
  */
 
 @Value
