@@ -3,7 +3,6 @@ package com.mobiquity.packer;
 import com.mobiquity.domain.Pack;
 import com.mobiquity.domain.PackItem;
 import com.mobiquity.exception.APIException;
-import com.mobiquity.util.FileContentParser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +28,6 @@ public class Packer {
      * @throws APIException in inappropriate conditions
      */
     public static String pack(String filePath) throws APIException {
-
         FileContentParser fileContentParser = new FileContentParser();
         List<Pack> packs = fileContentParser.parse(filePath);
 

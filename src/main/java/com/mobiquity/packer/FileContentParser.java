@@ -1,4 +1,4 @@
-package com.mobiquity.util;
+package com.mobiquity.packer;
 
 import com.mobiquity.domain.Pack;
 import com.mobiquity.exception.APIException;
@@ -20,6 +20,9 @@ import java.util.Scanner;
 
 public class FileContentParser {
 
+    protected FileContentParser() {
+    }
+
     /**
      * parse() method gets file on given filePath.
      * File parsed line by line with the help of LineParser class.
@@ -28,7 +31,7 @@ public class FileContentParser {
      * @return List of Pack(s)
      * @throws APIException if parsing process gets an exception, APIException will be thrown with the specified cause.
      */
-    public List<Pack> parse(String filePath) throws APIException {
+    protected List<Pack> parse(String filePath) throws APIException {
 
         List<Pack> packList = new ArrayList<>();
 

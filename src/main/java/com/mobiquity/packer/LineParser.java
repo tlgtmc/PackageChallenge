@@ -1,4 +1,4 @@
-package com.mobiquity.util;
+package com.mobiquity.packer;
 
 import com.mobiquity.domain.Pack;
 import com.mobiquity.domain.PackItem;
@@ -19,6 +19,9 @@ import java.util.regex.Pattern;
 public class LineParser {
 
     private static final String PACK_ITEM_PATTERN = "\\((?<id>\\d+)\\,(?<weight>\\d+(\\.\\d{1,2})?)\\,€(?<cost>\\d+(\\.\\d{1,2})?)\\)";
+
+    protected LineParser() {
+    }
 
     /**
      * validateAndParse method validates the line input,
