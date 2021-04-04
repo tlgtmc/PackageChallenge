@@ -12,9 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class MessageUtil {
 
-    public static final String ERROR_NO_ARG = "Packer needs a file path argument to run!";
-    public static final String ERROR_TOO_MANY_ARGS = "Packer needs single parameter!";
-
     public static final String ERROR_INVALID_LINE_CONTENT = "Invalid line, example input: %s";
     public static final String ERROR_INVALID_WEIGHT = "Invalid weight! Acceptable type is a decimal.";
     public static final String ERROR_INVALID_WEIGHT_RANGE = "Invalid weight! Weight should be a value between 0 - 100.";
