@@ -39,7 +39,7 @@ public class LineParser {
 
         var inputSplit = line.split(":");
 
-        var weight = (int) (getWeightWithValidation(inputSplit[0].trim()) * 100);
+        var weight = (int) getWeightWithValidation(inputSplit[0].trim());
 
         List<PackItem> packItems = getPackItemsWithValidation(inputSplit[1]);
 
@@ -56,7 +56,8 @@ public class LineParser {
      */
     private double getWeightWithValidation(String weight) throws APIException {
         try {
-            return Double.parseDouble(weight);
+            double parsedWeight = Double.parseDouble(weight);
+            return isValidWeight(parsedWeight);
         } catch (NumberFormatException e) {
             throw new APIException(MessageUtil.ERROR_INVALID_WEIGHT);
         }
